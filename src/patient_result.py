@@ -108,7 +108,9 @@ def get_patient_result(labels, preds):
     df["patient_id"] = patient_ids
 
     # Save segment-level DataFrame
-    os.makedirs("tmp", exist_ok=True)
+    folder_path = "tmp"
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
     df.to_csv("./tmp/df_segment.csv", index=False)
 
     # Group by recording_id to aggregate segment-level predictions

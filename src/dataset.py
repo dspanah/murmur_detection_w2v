@@ -70,7 +70,9 @@ def prepare_dataset(train_path, valid_path, audio_path, input_column, target_col
             - labels: Sorted list of unique labels in the training dataset.
     """
     
-    os.makedirs("tmp", exist_ok=True)
+    folder_path = "tmp"
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
     
     # Add audio path to input column in both datasets
     df_train = append_path_to_df(train_path, audio_path, input_column)
@@ -123,6 +125,11 @@ def prepare_test_dataset(test_path, audio_path, input_column, target_column):
             - test_dataset: HuggingFace dataset for testing.
             - labels: Sorted list of unique labels in the test dataset.
     """
+    folder_path = "tmp"
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
+    
+    
     # Modify audio path in the input column
     df_test = append_path_to_df(test_path, audio_path, input_column)
 
