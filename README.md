@@ -1,4 +1,4 @@
-# murmur_detection_w2v
+# Heart murmur detection using wav2vec 2.0
 
 Python implementation of heart murmur detection using wav2vec 2.0 as presented in the following paper:
 
