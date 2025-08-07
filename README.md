@@ -10,11 +10,11 @@ Install the required packages by running:
 `pip install -r requirements.txt`
 
 ## Usage
-To pre-process the Digiscope dataset use the `data preparation.ipynb` notebook under `data` directory.
+To download and pre-process the Digiscope dataset use the `data preparation.ipynb` notebook under `data` directory.
 
 To fine-tune and validate the model use `fine_tune.py` under `src` directory.
 
-To test the model on test set use `test.py` under `src` directory.
+To test the model on the test set use `test.py` under `src` directory.
 
 ## Citation
 
