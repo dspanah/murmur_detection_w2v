@@ -12,9 +12,9 @@ Install the required packages by running:
 ## Usage
 To download and pre-process the Digiscope dataset use the `data preparation.ipynb` notebook under `data` directory.
 
-To fine-tune and validate the model use `fine_tune.py` under `src` directory.
+To fine-tune the pre-trained wav2vec 2 model and validate it using train/validation sets use `fine_tune.py` under `src` directory.
 
-To test the model on the test set use `test.py` under `src` directory.
+To test the fine-tuned model on the test set use `test.py` under `src` directory.
 
 ## Citation
 
