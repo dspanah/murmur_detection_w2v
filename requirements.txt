@@ -1,5 +1,5 @@
-torch
-torchaudio
+torch==2.7.1
+torchaudio==2.7.1
 datasets==4.0.0
 evaluate==0.4.3
 huggingface-hub==0.33.0
