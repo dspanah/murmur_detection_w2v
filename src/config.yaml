@@ -1,0 +1,11 @@
+data:
+  train_path: "./metadata/finetune_train_set.csv"
+  valid_path: "./metadata/finetune_dev_set.csv"
+  test_path: "./metadata/test_set.csv"
+  audio_path: "../data/digiscope_segmented/"
+
+model:
+  ft_model_path: "../models/finetuned_model/checkpoint-1470/"
+  pt_model_path: "../models/pretrained_model/"
+  
+  
