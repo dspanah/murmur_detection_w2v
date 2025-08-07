@@ -11,3 +11,4 @@ scikit-learn
 scipy
 soundfile
 PyYAML
+tf_keras
