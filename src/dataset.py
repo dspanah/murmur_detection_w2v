@@ -1,5 +1,6 @@
 import pandas as pd
 from datasets import load_dataset
+import os
 
 
 def append_path_to_df(df_path, audio_path, column):
@@ -68,6 +69,9 @@ def prepare_dataset(train_path, valid_path, audio_path, input_column, target_col
             - eval_dataset: HuggingFace dataset for validation.
             - labels: Sorted list of unique labels in the training dataset.
     """
+    
+    os.makedirs("tmp", exist_ok=True)
+    
     # Add audio path to input column in both datasets
     df_train = append_path_to_df(train_path, audio_path, input_column)
     df_eval = append_path_to_df(valid_path, audio_path, input_column)

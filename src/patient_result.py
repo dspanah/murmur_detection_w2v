@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import math
 import yaml
+import os
 
 def load_config(path="config.yaml"):
     with open(path, 'r') as f:
@@ -107,6 +108,7 @@ def get_patient_result(labels, preds):
     df["patient_id"] = patient_ids
 
     # Save segment-level DataFrame
+    os.makedirs("tmp", exist_ok=True)
     df.to_csv("./tmp/df_segment.csv", index=False)
 
     # Group by recording_id to aggregate segment-level predictions
